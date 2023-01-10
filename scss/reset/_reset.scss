@@ -1,24 +1,28 @@
+@use "../abstracts/colors" as c;
+
+
 *,
 *::before,
 *::after{
     margin: 0;
     padding: 0;
-    font-family: 'Raleway', sans-serif;
+    // font-family: 'Raleway', sans-serif;
+    font-family: 'Sofia Sans', sans-serif;
     box-sizing: border-box;
 }
 
 html{
     scroll-behavior: smooth;
+    background-color: c.$clr-primary;
 }
-
 
 // html,
 // body{
-//     overflow-x: hidden;
-// }
-
+    //     overflow-x: hidden;
+    // }
+    
 // body{
-//     // overflow: hidden;
+    // overflow: hidden;
 // }
 
 
