@@ -1,5 +1,5 @@
 {
-  "name": "vite-template-2023",
+  "name": "zookypunk-2023",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,5 +10,8 @@
   },
   "devDependencies": {
     "vite": "^4.0.0"
+  },
+  "dependencies": {
+    "sass": "^1.57.1"
   }
 }
