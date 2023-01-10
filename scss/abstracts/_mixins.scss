@@ -1,0 +1,87 @@
+@use"./colors" as c;
+
+@mixin imagesvg($fbg){
+    background: {
+        image: url("/img/#{$fbg}.svg");
+        size: cover;
+        position: top;
+    }
+}
+
+@mixin imagejpg($fbg){
+    background: {
+        image: url("/img/#{$fbg}.jpg");
+        size: cover;
+        position: center;
+    }
+}
+
+@mixin imagejpg-fade($fbg){
+    background: {
+        image: linear-gradient($overlay, $overlay), url("/img/#{$fbg}.jpg");
+        size: cover;
+        position: center;
+    }
+}
+
+@mixin imagewebp($bg){
+    background: {
+        image: url("/img/#{$bg}.webp");
+        size: cover;
+        position: center;
+        width: 50%;
+    }
+}
+
+@mixin imagewbp-fade($fbg){
+    background: {
+        image: linear-gradient(c.$overlay, c.$overlay), url("/img/#{$fbg}.webp");
+        size: cover;
+        position: center;
+    }
+}
+
+@mixin imagepng($bg){
+    background: {
+        image: url("/img/#{$bg}.png");
+        size: cover;
+        position: center;
+    }
+}
+
+@mixin gridimage($gbg){
+    background: {
+        image: url("/img/grid\ images/#{$gbg}.jpg");
+        size: cover;
+        position: center;
+    }
+}
+
+
+
+
+@mixin imagejpg-fadewhite($fbg){
+    background: {
+        image: linear-gradient($white-trans, $white-trans), url("/img/#{$fbg}.jpg");
+        size: cover;
+        position: center;
+    }
+}
+
+@mixin center-image(){
+    background: {
+        size: cover;
+        position: center;
+    }
+}
+
+@mixin centertop-image(){
+    background: {
+        size: cover;
+        position: top;
+    }
+}
+
+
+
+

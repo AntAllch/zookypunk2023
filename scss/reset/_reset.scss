@@ -1,0 +1,37 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+// html,
+// body{
+//     overflow-x: hidden;
+// }
+
+// body{
+//     // overflow: hidden;
+// }
+
+
+// ENABLE AND CHANGE THE FOCUS COLORS DEPENDING ON YOUR DESIGN
+
+// :focus{
+//     outline: 3px solid rgb(132, 130, 255);
+//     outline-offset: 3px;
+// }
+
+
+// ENABLE THIS OUTLINE FOR DEBUGGING PURPOSES, E.G. HORIZONTAL SCROLLING
+
+// *{
+//     outline: 2px solid red;
+// }
