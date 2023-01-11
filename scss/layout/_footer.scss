@@ -1,0 +1,32 @@
+@use "../abstracts/colors" as c;
+@use "../abstracts/typography" as f;
+@use "../abstracts/responsive" as r;
+
+footer{
+
+    @include r.respond(desktop){
+        display: none !important;
+    }
+
+    background-color: orange;
+    padding-block: 2rem; //padding top and bottom
+    place-items: center;
+    
+    .footer-social-list{ //ul tags
+        
+        background-color: red;
+        width: 60%;
+        max-width: 15em;
+        justify-content: space-between;
+        
+        .footer-social-item{ //li tags
+            list-style: none;
+        }
+        .footer-social-link{ //a tags
+            text-decoration: none;
+            color: c.$clr-neutral;
+            font-size: f.$fs-small;
+        }
+    }
+
+}

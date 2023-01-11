@@ -1,43 +1,46 @@
 @use "../abstracts/colors" as c;
 @use "../abstracts/typography" as f;
+@use "../abstracts/responsive" as r;
 
 header{
-    // background-color: rgb(23, 79, 126);
     color: white;
-    padding: 1.8rem 10rem;
+    display: none;
 
+    @include r.respond(desktop){
+        display: block;
+        width: 80%;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding-block: 1.5rem;
+        // background-color: orange;
+    }
+    
     nav{
         color: c.$clr-neutral;
         align-items: center;
         font-weight: f.$fw-black;
-        
         .logo{
             font-size: f.$fs-medium;
             font-weight: f.$fw-medium;
         }
-        
         ul{
-            
             .nav-item,
             .social-item{
                 list-style: none;
                 margin-left: 5rem;
             }
-            
             .nav-item{
                 text-transform: uppercase;
                 font-weight: f.$fw-bold;
                 letter-spacing: 3px;
                 margin-top: 0.1rem;
             }
-            
             a{
                 text-decoration: none;
                 color: c.$clr-neutral;
                 font-size: f.$fs-small;
             }
         }
-
         .social-list{
             margin-left: auto;
         }
