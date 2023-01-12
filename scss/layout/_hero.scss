@@ -40,10 +40,11 @@
         font-size: f.$fs-extralarge;
         color: c.$clr-secondary;
         margin-block: 5rem 3rem;
-
+        
         @include r.respond(desktop){
             filter: drop-shadow(0px 4px 4px rgb(0,0,0,0.15));
-            font-size: 7.5rem;
+            // font-size: 7.5rem;
+            font-size: clamp(1rem, 7.5vw, 7.5rem);
         }
     }
 
@@ -70,7 +71,7 @@
             @include r.respond(desktop){
                 width: 200px;
                 aspect-ratio: 1/1.5;
-                margin-right: 10.5rem;
+                margin-right: clamp(1rem, 2vw + 10.5rem, 10rem);
             }
 
             p{ //GUITARS, ART
@@ -87,8 +88,8 @@
         @include r.respond(desktop){
 
             position: absolute;
-            bottom: -18.9rem;
-            right: -13.1rem;
+            bottom: -18.8rem;
+            right: -7rem;
             display: flex;
     
             .z-block,
