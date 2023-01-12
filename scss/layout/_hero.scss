@@ -8,12 +8,14 @@
 .hero {
     display: grid;
     place-items: center;
+    background: red;
     
     @include r.respond(desktop){
         display: block;
-        width: 80%;
-        max-width: 1400px;
-        margin: 0 auto;
+        width: 90%;
+        // max-width: 1400px;
+        margin-left: auto;
+        // padding-left: clamp(7.25rem, 2vw + 2rem, 15.5rem);
         position: relative;
     }
     
@@ -39,12 +41,11 @@
         font-weight: f.$fw-black;
         font-size: f.$fs-extralarge;
         color: c.$clr-secondary;
-        margin-block: 5rem 3rem;
         
         @include r.respond(desktop){
             filter: drop-shadow(0px 4px 4px rgb(0,0,0,0.15));
-            // font-size: 7.5rem;
             font-size: clamp(1rem, 7.5vw, 7.5rem);
+            margin-bottom: 3rem;
         }
     }
 
@@ -55,6 +56,7 @@
 
         @include r.respond(desktop){
             flex-direction: initial;
+            margin-bottom: initial;
         }
         
         a{
@@ -69,9 +71,10 @@
             place-items: center;
             
             @include r.respond(desktop){
-                width: 200px;
+                // width: 230px;
+                width: clamp(200px, 17.5vw, 230px);
                 aspect-ratio: 1/1.5;
-                margin-right: clamp(1rem, 2vw + 10.5rem, 10rem);
+                margin-right: 2rem
             }
 
             p{ //GUITARS, ART
@@ -89,13 +92,13 @@
 
             position: absolute;
             bottom: -18.8rem;
-            right: -7rem;
+            right: 0;
             display: flex;
     
             .z-block,
             .p-block{
                 overflow: hidden;
-                width: 17rem;
+                width: clamp(10rem, 20vw + 1rem, 17rem);
                 font-size: 35rem;
                 font-weight: f.$fw-black;
             }
