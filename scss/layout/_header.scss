@@ -39,6 +39,19 @@ header{
                 text-decoration: none;
                 color: c.$clr-neutral;
                 font-size: f.$fs-small;
+
+                svg{
+                    fill: c.$clr-secondary;
+                    width: 1.5rem;
+                    transition: scale 250ms ease-in-out;
+                }
+
+                &:hover svg{
+                    fill: c.$clr-tertiary;
+                    scale: 1.5;
+                    transition: scale 250ms ease-in-out;
+                }
+                
             }
         }
         .social-list{
