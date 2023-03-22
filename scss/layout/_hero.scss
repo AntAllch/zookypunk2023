@@ -71,8 +71,8 @@
             place-items: center;
             
             &:hover p{
-                font-size: 1.2rem;
-                transition: font-size 250ms ease-in-out;
+                font-size: 1.1rem;
+                transition: font-size 150ms ease-in-out;
             }
 
             @include r.respond(desktop){
