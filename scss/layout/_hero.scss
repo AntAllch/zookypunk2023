@@ -21,6 +21,10 @@
     
     .mobile-hero-text{ //ZP
 
+        // @include r.respond(tablet){
+        //     margin-bottom: 5rem;
+        // }
+
         @include r.respond(desktop){
             display: none;
         }
@@ -28,7 +32,7 @@
         font-size: 15rem;
         font-weight: f.$fw-black;
         line-height: 0.55;
-        margin-top: 3rem;
+        margin-top: 5rem;
         color: c.$clr-secondary;
         
         span{ //P
@@ -41,18 +45,27 @@
         font-weight: f.$fw-black;
         font-size: f.$fs-extralarge;
         color: c.$clr-secondary;
+        margin-bottom: 3rem;
+
+        @include r.respond(tablet){
+            margin-bottom: 3rem;
+        }
         
         @include r.respond(desktop){
             filter: drop-shadow(0px 4px 4px rgb(0,0,0,0.15));
             font-size: clamp(1rem, 7.5vw, 7.5rem);
-            margin-bottom: 3rem;
         }
     }
 
+    //Group of boxes with Guitar and Art
     .art-selection{
         flex-direction: column;
-        gap: 1em;
+        gap: 1.5em;
         margin-bottom: 3rem;
+
+        @include r.respond(tablet){
+            flex-direction: initial;
+        }
 
         @include r.respond(desktop){
             flex-direction: initial;
@@ -63,8 +76,9 @@
             text-decoration: none;
             color: c.$clr-neutral;
         }
-
-        .art-item{ //Grey box with GUITAR and ART inside
+        
+        //Grey box with GUITAR and ART inside
+        .art-item{ 
             width: 250px;
             aspect-ratio: 1;
             background-color: c.$clr-tertiary;

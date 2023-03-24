@@ -1,4 +1,5 @@
 @use "../abstracts/colors" as c;
+@use "../abstracts/responsive" as r;
 
 
 *,
@@ -14,6 +15,32 @@
 html{
     scroll-behavior: smooth;
     background-color: c.$clr-primary;
+}
+
+body{
+
+    position: relative;
+
+    //Greny angled box in the background
+    &::before{
+        content: "";
+        width: 100%;
+        height: 60%;
+        bottom: -3px;
+        background-color: c.$clr-tertiary;
+        position: absolute;
+        z-index: -1;
+        clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+        opacity: 30%;
+
+        @include r.respond(tablet){
+            clip-path: polygon(0 35%, 100% 0, 100% 100%, 0% 100%);
+        }
+
+        @include r.respond(desktop){
+            display: none;
+        }
+    }
 }
 
 // html,

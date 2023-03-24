@@ -8,16 +8,28 @@ footer{
         display: none !important;
     }
 
-    background-color: orange;
+    // background-color: orange;
     padding-block: 2rem; //padding top and bottom
     place-items: center;
     
     .footer-social-list{ //ul tags
         
-        background-color: red;
+        // background-color: red;
         width: 60%;
         max-width: 15em;
         justify-content: space-between;
+
+        svg{
+            fill: c.$clr-secondary;
+            width: 1.5rem;
+            transition: scale 250ms ease-in-out;
+
+            &:hover{
+                fill: c.$clr-tertiary;
+                scale: 1.3;
+                transition: scale 150ms ease-in-out;
+            }
+        }
         
         .footer-social-item{ //li tags
             list-style: none;

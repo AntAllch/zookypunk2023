@@ -19,21 +19,24 @@ header{
         color: c.$clr-neutral;
         align-items: center;
         font-weight: f.$fw-black;
+
         .logo{
             font-size: f.$fs-medium;
             font-weight: f.$fw-medium;
         }
+
         .nav-item,
         .social-item{
             list-style: none;
             margin-left: 5rem;
         }
+
         .nav-list{
 
                 .nav-item{
                     text-transform: uppercase;
                     font-weight: f.$fw-bold;
-                    letter-spacing: 3px;
+                    // letter-spacing: 3px;
                     margin-top: 0.1rem;
 
                     .nav-link{
@@ -41,8 +44,12 @@ header{
                         color: c.$clr-neutral;
                         font-size: f.$fs-small;
                         position: relative;
-                        // transition: width 250ms ease-in-out;
+                        
+                        &:hover{
+                            color: c.$clr-secondary;
+                        }
 
+                        // line under links on hover
                         &::before{
                             content: "";
                             width: 0%;
@@ -51,21 +58,20 @@ header{
                             position: absolute;
                             bottom: -5px;
                             opacity: 0;
-                            // transform: scaleX(0%);
                             transform-origin: right;
-                            transition: all 250ms ease-in-out;
+                            transition: all 150ms ease-in-out;
                         }
 
                         &:hover::before{
                             opacity: 1;
                             width: 100%;
-                            // transform: scaleX(100%);
                             transform-origin: left; 
                         }
                     }
 
                 }
         }
+
         .social-list{
             margin-left: auto;
 
@@ -73,6 +79,7 @@ header{
                 fill: c.$clr-secondary;
                 width: 1.5rem;
                 transition: scale 250ms ease-in-out;
+
                 &:hover{
                     fill: c.$clr-tertiary;
                     scale: 1.3;
