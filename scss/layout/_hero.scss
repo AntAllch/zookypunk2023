@@ -148,4 +148,24 @@
         }
     }
 
+    
+}
+
+//For Guitar and Art Pages
+
+.products-hero{
+    
+    @include r.respond(desktop){
+        display: block;
+        width: 90%;
+        // max-width: 1400px;
+        margin-left: auto;
+        // padding-left: clamp(7.25rem, 2vw + 2rem, 15.5rem);
+        position: relative;
+    }
+    
+    .hero-title{
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
 }
