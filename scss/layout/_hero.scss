@@ -166,6 +166,19 @@
     
     .hero-title{
         text-transform: uppercase;
-        letter-spacing: 2px;
+        letter-spacing: 1rem;
+        width: 90%;
+        font-size: 3.75rem;
+        font-weight: f.$fw-light;
+        text-align: center;
+        background-color: red;
+        
+    }
+
+    .products-group{
+        width: 90%;
+        height: 400px;
+        background-color: orange;
+        // margin: 0 auto;
     }
 }
