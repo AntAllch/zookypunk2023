@@ -164,21 +164,56 @@
         position: relative;
     }
     
+    //GUITAR and ART
     .hero-title{
         text-transform: uppercase;
         letter-spacing: 1rem;
         width: 90%;
-        font-size: 3.75rem;
+        font-size: 2.5rem;
         font-weight: f.$fw-light;
         text-align: center;
-        background-color: red;
+        // background-color: red;
+        margin-inline: auto; //Margin left and right
+        margin-block: 0 4rem;
+
+        @include r.respond(desktop){
+            margin-inline: initial;
+        }
         
     }
 
     .products-group{
         width: 90%;
-        height: 400px;
-        background-color: orange;
-        // margin: 0 auto;
+        // background-color: orange;
+        margin-inline: auto;
+        margin-block: 0 5rem;
+
+        @include r.respond(desktop){
+            margin-inline: initial;
+        }
+
+        .products-items{
+
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2em;
+
+            .products-item{
+                background-color: gray;
+                width: 200px;
+                aspect-ratio: 1/1.5;
+                display: grid;
+                place-items: center;
+                transition: scale 250ms ease-in-out;
+
+                &:hover p{
+                    // font-size: 5rem;
+                    scale: 1.5;
+                    transition: scale 250ms ease-in-out;
+                }
+            }
+
+        }
     }
 }
