@@ -154,43 +154,60 @@
 //For Guitar and Art Pages
 
 .products-hero{
+    text-align: center;
     
     @include r.respond(desktop){
         display: block;
         width: 90%;
         // max-width: 1400px;
-        margin-left: auto;
+        margin: 0 auto;
         // padding-left: clamp(7.25rem, 2vw + 2rem, 15.5rem);
         position: relative;
+        // background-color: orange;
+    }
+
+    .hero-title,
+    .product-hero-title{
+            text-transform: uppercase;
+            letter-spacing: 1rem;
+            width: 90%;
+            font-size: 2.5rem;
+            font-weight: f.$fw-light;
+            text-align: center;
+            background-color: red;
+            width: fit-content;
+            padding-left: 1rem;
+
+            @include r.respond(desktop){
+                margin-inline: auto;
+            }
     }
     
     //GUITAR and ART
     .hero-title{
-        text-transform: uppercase;
-        letter-spacing: 1rem;
-        width: 90%;
-        font-size: 2.5rem;
-        font-weight: f.$fw-light;
-        text-align: center;
-        // background-color: red;
         margin-inline: auto; //Margin left and right
-        margin-block: 0 4rem;
+        margin-block: 0 4rem; //Margin top and bottom
+    }
 
-        @include r.respond(desktop){
-            margin-inline: initial;
-        }
-        
+    .product-hero-title{
+        margin-bottom: 2rem;
+    }
+
+    .product-hero-subtitle{
+        font-weight: f.$fw-light;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
     }
 
     .products-group{
         width: 90%;
-        // background-color: orange;
+        // background-color: burlywood;
         margin-inline: auto;
         margin-block: 0 5rem;
 
-        @include r.respond(desktop){
-            margin-inline: initial;
-        }
+        // @include r.respond(desktop){
+        //     margin-inline: initial;
+        // }
 
         .products-items{
 
@@ -198,21 +215,50 @@
             justify-content: center;
             flex-wrap: wrap;
             gap: 2em;
+            // width: 90%;
+            margin: 0 auto;
+            // background-color: teal;
 
             .products-item{
+
+                color: c.$clr-neutral;
+                width: 90%;
+                max-width: 300px;
+                aspect-ratio: 1/1.25;
                 background-color: gray;
-                width: 200px;
-                aspect-ratio: 1/1.5;
                 display: grid;
                 place-items: center;
-                transition: scale 250ms ease-in-out;
-
+                text-decoration: none;
+                
                 &:hover p{
                     // font-size: 5rem;
                     scale: 1.5;
                     transition: scale 250ms ease-in-out;
                 }
+
+                @include r.respond(tablet){
+                    width: 250px;
+                    aspect-ratio: 1/1.5;
+                    // background-color: red;
+                }
+                
+                .products-name{
+                    transition: scale 250ms ease-in-out;
+                    text-align: center;
+                    
+    
+                    span{
+                        font-weight: f.$fw-bold;
+                        font-size: f.$fs-medium;
+                    }
+    
+                    p{
+                        text-transform: uppercase;
+                    }
+    
+                }
             }
+
 
         }
     }
