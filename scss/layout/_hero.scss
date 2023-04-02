@@ -170,13 +170,13 @@
     .hero-title,
     .product-hero-title{
             text-transform: uppercase;
-            letter-spacing: 1rem;
-            width: 90%;
+            letter-spacing: f.$ls-1;
+            // width: 90%;
             font-size: 2.5rem;
             font-weight: f.$fw-light;
             text-align: center;
             background-color: red;
-            // width: fit-content;
+            width: fit-content;
             padding-left: 1rem;
 
             @include r.respond(desktop){
@@ -196,7 +196,7 @@
 
     .strat-title{
         font-size: 1rem;
-        letter-spacing: 1rem;
+        letter-spacing: f.$ls-1;
         padding-left: 1rem;
         margin-inline: auto;
         width: fit-content;

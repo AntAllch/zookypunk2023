@@ -17,6 +17,11 @@ html{
     background-color: c.$clr-primary;
 }
 
+ul[role="list"],
+ol[role="list"]{
+    list-style: none;
+}
+
 body{
 
     position: relative;
