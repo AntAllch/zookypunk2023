@@ -59,6 +59,7 @@
 
     //Group of boxes with Guitar and Art
     .art-selection{
+        display: flex;
         flex-direction: column;
         gap: 1.5em;
         margin-bottom: 3rem;
@@ -175,7 +176,7 @@
             font-weight: f.$fw-light;
             text-align: center;
             background-color: red;
-            width: fit-content;
+            // width: fit-content;
             padding-left: 1rem;
 
             @include r.respond(desktop){
@@ -193,10 +194,24 @@
         margin-bottom: 2rem;
     }
 
+    .strat-title{
+        font-size: 1rem;
+        letter-spacing: 1rem;
+        padding-left: 1rem;
+        margin-inline: auto;
+        width: fit-content;
+        max-width: 850px;
+
+        @include r.respond(tablet){
+            font-size: 2.5rem;
+        }
+
+    }
+
     .product-hero-subtitle{
         font-weight: f.$fw-light;
         font-size: 1.5rem;
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
     }
 
     .products-group{
@@ -224,7 +239,7 @@
                 color: c.$clr-neutral;
                 width: 90%;
                 max-width: 300px;
-                aspect-ratio: 1/1.25;
+                aspect-ratio: 1/1;
                 background-color: gray;
                 display: grid;
                 place-items: center;
@@ -236,11 +251,11 @@
                     transition: scale 250ms ease-in-out;
                 }
 
-                @include r.respond(tablet){
-                    width: 250px;
-                    aspect-ratio: 1/1.5;
-                    // background-color: red;
-                }
+                // @include r.respond(tablet){
+                //     width: 250px;
+                //     aspect-ratio: 1/1.5;
+                //     // background-color: red;
+                // }
                 
                 .products-name{
                     transition: scale 250ms ease-in-out;
